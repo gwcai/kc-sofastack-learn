@@ -14,6 +14,9 @@ public interface BalanceMngMapper {
     void createUser(@Param("userName") String userName);
 
     @Select("select * from balance_tb where user_name = #{userName}")
+    @Results({
+            @Result(column = "user_name",property ="userName")
+    })
     Balance queryBalance(@Param("userName") String userName);
 
     @Update("update balance_tb set balance = balance - #{amount} where user_name = #{userName}")

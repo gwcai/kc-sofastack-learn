@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div style="width: 400px">
+        <label>用户名：</label>
+        <input id="username" name="username" />
+    </div>
+    <div style="width: 400px">
+        <label style="margin-right: 12px">总  价：</label>
+        <input id="price" name="price" />
+        <button id="add" onclick="doAdd()">新增</button>
+    </div>
+
+    <div style="width: 400px;margin:10px 0 0 0">
+        <label>用户名：</label>
+        <input id="username1" name="username1" />
+        <button id="query" onclick="doQuery()">查询总价</button>
+        <button id="query-balance" onclick="doQueryBalance()">查询余额</button>
+    </div>
+    <div>
+        <textarea id="query-result" rows="10" style="width: 400px;margin:10px 0 0 0"></textarea>
+    </div>
+</div>
+<script src="/static/js/jquery-3.5.1.min.js"></script>
+<script>
+    function doAdd() {
+        var username = $("#username").val();
+        var price = $("#price").val();
+        var data = {
+            'userName':username,
+            'price': price
+        }
+        $.ajax({
+            url:'/price/save',
+            contentType:'text/html;charset=utf-8',
+            type:'POST',
+            data:JSON.stringify(data),
+            success:function (res) {
+                //var resdata = JSON.parse(res);
+                console.log(res);
+            }
+        })
+    }
+
+    function doQuery() {
+        var username = $("#username1").val();
+        var price = $("#price").val();
+        var data = {
+            'userName':username
+        };
+        $.ajax({
+            url:'/price/query',
+            contentType:'text/html;charset=utf-8',
+            type:'POST',
+            data:JSON.stringify(data),
+            success:function (res) {
+                var resdata = JSON.stringify(res);
+                console.log(resdata);
+                $("#query-result").val(resdata);
+            }
+        })
+    }
+
+    function doQueryBalance() {
+        var username = $("#username1").val();
+        var price = $("#price").val();
+        var data = {
+            'userName':username
+        };
+        $.ajax({
+            url:'/price/balance',
+            contentType:'text/html;charset=utf-8',
+            type:'POST',
+            data:JSON.stringify(data),
+            success:function (res) {
+                var resdata = JSON.stringify(res);
+                console.log(resdata);
+                $("#query-result").val(resdata);
+            }
+        })
+    }
+</script>
+</body>
+</html>

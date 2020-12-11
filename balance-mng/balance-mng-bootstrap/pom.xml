@@ -16,5 +16,11 @@
             <groupId>io.sofastack</groupId>
             <artifactId>balance-mng-impl</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-all</artifactId>
+            <version>0.6.1</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 </project>

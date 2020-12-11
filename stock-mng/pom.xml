@@ -28,6 +28,10 @@
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 		</dependency>
@@ -41,9 +45,47 @@
 		</dependency>
 
 		<!-- 引入依赖在这里 -->
+		<!--SOFARPC 依赖-->
+		<dependency>
+			<groupId>com.alipay.sofa</groupId>
+			<artifactId>rpc-sofa-boot-starter</artifactId>
+		</dependency>
+		<!--SOFATracer 依赖-->
+		<dependency>
+			<groupId>com.alipay.sofa</groupId>
+			<artifactId>tracer-sofa-boot-starter</artifactId>
+		</dependency>
+		<!--SOFARegistry 依赖-->
+		<dependency>
+			<groupId>com.alipay.sofa</groupId>
+			<artifactId>registry-client-all</artifactId>
+		</dependency>
+		<!--runtime 依赖-->
+		<dependency>
+			<groupId>com.alipay.sofa</groupId>
+			<artifactId>runtime-sofa-boot-starter</artifactId>
+		</dependency>
+		<!--SOFALookout 依赖-->
+		<dependency>
+			<groupId>com.alipay.sofa.lookout</groupId>
+			<artifactId>lookout-sofa-boot-starter</artifactId>
+		</dependency>
 
+		<dependency>
+			<groupId>io.seata</groupId>
+			<artifactId>seata-all</artifactId>
+		</dependency>
 
-
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.seata</groupId>
+			<artifactId>seata-all</artifactId>
+			<version>0.6.1</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 </project>

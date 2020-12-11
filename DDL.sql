@@ -1,4 +1,19 @@
 # ==========================
+# total_price_tb
+DROP TABLE IF EXISTS `total_price_tb`;
+CREATE TABLE `total_price_tb`
+(
+    `id`        int(11) NOT NULL AUTO_INCREMENT,
+    `user_name` varchar(255)   DEFAULT NULL,
+    `price`   decimal(16, 2) DEFAULT 0.00,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY (`user_name`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
+
+# ==========================
+
+# ==========================
 # balance db
 CREATE DATABASE balance_db;
 USE balance_db;

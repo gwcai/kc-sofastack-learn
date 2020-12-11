@@ -1,5 +1,7 @@
 package io.sofastack.balance.manage.facade;
 
+import io.sofastack.balance.manage.model.Balance;
+
 import java.math.BigDecimal;
 
 /**
@@ -31,4 +33,6 @@ public interface BalanceMngFacade {
      * @param amount 减少数目
      */
     void minusBalance(String userName, BigDecimal amount);
+
+    Balance query(String userName);
 }
