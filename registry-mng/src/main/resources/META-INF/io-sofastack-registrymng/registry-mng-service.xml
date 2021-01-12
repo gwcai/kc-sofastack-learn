@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:sofa="http://schema.alipay.com/sofa/schema/slite"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://schema.alipay.com/sofa/schema/slite   http://schema.alipay.com/sofa/slite.xsd"
+       default-autowire="byName">
+    <bean id="registryService" class="io.sofastack.registrymng.impl.RegistryServiceImp"/>
+    <sofa:service ref="registryService" interface="io.sofastack.registrymng.facade.RegistryService">
+        <sofa:binding.bolt>
+            <sofa:global-attrs registry="127.0.0.1" timeout="3000"
+                               warm-up-time="60000" warm-up-weight="10" weight="100"/>
+        </sofa:binding.bolt>
+        <sofa:binding.rest/>
+    </sofa:service>
+</beans>

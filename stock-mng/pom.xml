@@ -23,6 +23,43 @@
 			<artifactId>balance-mng-facade</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>io.sofastack</groupId>
+			<artifactId>registry-mng</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+
+		<!-- sofa rest middleware -->
+		<dependency>
+			<groupId>com.alipay.sofa</groupId>
+			<artifactId>rest-enterprise-sofa-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alipay.sofa</groupId>
+			<artifactId>rpc-enterprise-sofa-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-logging</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -46,10 +83,10 @@
 
 		<!-- 引入依赖在这里 -->
 		<!--SOFARPC 依赖-->
-		<dependency>
-			<groupId>com.alipay.sofa</groupId>
-			<artifactId>rpc-sofa-boot-starter</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.alipay.sofa</groupId>-->
+<!--			<artifactId>rpc-sofa-boot-starter</artifactId>-->
+<!--		</dependency>-->
 		<!--SOFATracer 依赖-->
 		<dependency>
 			<groupId>com.alipay.sofa</groupId>
@@ -61,10 +98,10 @@
 			<artifactId>registry-client-all</artifactId>
 		</dependency>
 		<!--runtime 依赖-->
-		<dependency>
-			<groupId>com.alipay.sofa</groupId>
-			<artifactId>runtime-sofa-boot-starter</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.alipay.sofa</groupId>-->
+<!--			<artifactId>runtime-sofa-boot-starter</artifactId>-->
+<!--		</dependency>-->
 		<!--SOFALookout 依赖-->
 		<dependency>
 			<groupId>com.alipay.sofa.lookout</groupId>
